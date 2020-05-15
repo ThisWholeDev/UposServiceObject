@@ -1,6 +1,6 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
-using log4net;
 using Upos.ServiceObject.Base.Properties;
 using Upos.ServiceObject.Base.UposEvents;
 
@@ -8,7 +8,7 @@ namespace Upos.ServiceObject.Base
 {
     public abstract class UposBase : IUposBase
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(UposBase));
+        private static readonly ILog Log = Logger.Create(nameof(UposBase));
 
         public IReadWindowsUposRegistry WindowsUposRegistry { get; set; } = new RegistryHelper();
 

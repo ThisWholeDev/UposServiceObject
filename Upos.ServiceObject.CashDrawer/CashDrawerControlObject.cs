@@ -5,7 +5,7 @@ namespace Upos.ServiceObject.CashDrawer
 {
     public class CashDrawerControlObject : Base.DynamicControlObject
     {
-        private static ILog Log = LogManager.GetLogger(typeof(CashDrawerControlObject));
+        private static ILog Log = Logger.Create(nameof(CashDrawerControlObject));
 
         private readonly ICashDrawerControlObject _controlObject;
 

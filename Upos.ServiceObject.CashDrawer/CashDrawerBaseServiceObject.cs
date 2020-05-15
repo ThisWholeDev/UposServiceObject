@@ -10,7 +10,7 @@ namespace Upos.ServiceObject.CashDrawer
 {
     public abstract class CashDrawerBaseServiceObject : UposBase, ICashDrawer
     {
-        private static ILog Log = LogManager.GetLogger(typeof(CashDrawerBaseServiceObject));
+        private static ILog Log = Logger.Create(nameof(CashDrawerBaseServiceObject));
 
         private ICashDrawerDevice _device;
         protected ICashDrawerProperties _props;

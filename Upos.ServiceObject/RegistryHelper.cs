@@ -11,7 +11,7 @@ namespace Upos.ServiceObject
 
     public class RegistryHelper : IReadWindowsUposRegistry
     {
-        private static readonly ILog Log = LogManager.GetLogger(typeof(RegistryHelper));
+        private static readonly ILog Log = Logger.Create(nameof(RegistryHelper));
 
         public Dictionary<string, object> GetRegistryValues(string deviceClass, string deviceName)
         {

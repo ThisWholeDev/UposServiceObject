@@ -9,7 +9,7 @@ namespace Upos.ServiceObject.Base
     /// </summary>
     public abstract class DynamicControlObject : COPOS
     {
-        private static ILog _log = LogManager.GetLogger(typeof(DynamicControlObject));
+        private static ILog _log = Logger.Create(nameof(DynamicControlObject));
 
         public void SOData(int Status)
         {
